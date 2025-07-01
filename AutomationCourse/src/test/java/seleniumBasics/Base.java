@@ -12,7 +12,7 @@ public class Base {
 		driver.manage().window().maximize();
 	}
 
-	public void browserClose() {
+	public void browserCloseandquit() {
 		// driver.close();
 		//driver.quit();
 	}
@@ -21,7 +21,7 @@ public class Base {
 		// TODO Auto-generated method stub
 		Base base = new Base();
 		base.initializeBrowser();
-		base.browserClose();
+		base.browserCloseandquit();
 
 	}
 
