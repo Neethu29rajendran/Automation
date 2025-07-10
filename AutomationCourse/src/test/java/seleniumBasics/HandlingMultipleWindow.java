@@ -14,21 +14,19 @@ public class HandlingMultipleWindow extends Base {
 		clickElement.click();
 		Set<String> handleIds = driver.getWindowHandles();
 		System.out.println(handleIds);
-		Iterator<String>values=handleIds.iterator();
-		while(values.hasNext())
-		{
-			String current_id=values.next();
-			if(!current_id.equals(firstWindowHandleID))
-			{
+		Iterator<String> values = handleIds.iterator();
+		while (values.hasNext()) {
+			String current_id = values.next();
+			if (!current_id.equals(firstWindowHandleID)) {
 				driver.switchTo().window(current_id);
-				WebElement email_fld=driver.findElement(By.xpath("//input[@name='emailid']"));
+				WebElement email_fld = driver.findElement(By.xpath("//input[@name='emailid']"));
 				email_fld.sendKeys("abc@gmail.com");
-				WebElement submit_fld=driver.findElement(By.xpath("//input[@name='btnLogin']"));
+				WebElement submit_fld = driver.findElement(By.xpath("//input[@name='btnLogin']"));
 				submit_fld.click();
 				driver.switchTo().defaultContent();
 			}
 
-	}
+		}
 	}
 
 	public static void main(String[] args) {
