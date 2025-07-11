@@ -13,7 +13,7 @@ public class AlertHandling extends Base{
 		clickElement.click();
 		Alert alert=driver.switchTo().alert();
 		alert.accept();
-	}
+			}
 	
 	public void verifyConfirmAlert() {
 		driver.navigate().to("https://demoqa.com/alerts");
@@ -21,6 +21,7 @@ public class AlertHandling extends Base{
 		conform.click();
 		Alert alert=driver.switchTo().alert();
 		alert.accept();
+		//alert.dismiss();
 	}
 	
 	public void verifyPromtAlert() {
@@ -30,7 +31,7 @@ public class AlertHandling extends Base{
 		Alert alert=driver.switchTo().alert();
 		alert.sendKeys("Neethu");
 		alert.accept();
-		
+		//alert.dismiss();
 		
 	}
 
