@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 public class TestNgBase {
 	public WebDriver driver;
 
-	@BeforeMethod
+	@BeforeMethod//runs before every @test methods
 	public void initializeBrowser() {
 		driver = new ChromeDriver();
 		driver.get("https://www.saucedemo.com/v1/");
